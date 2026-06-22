@@ -1,4 +1,4 @@
-# cwenga10-synent-task6-CustomerSegmentation-cwenga
+
 # Customer Segmentation using K-Means Clustering
 
 ## 📌 Project Overview
