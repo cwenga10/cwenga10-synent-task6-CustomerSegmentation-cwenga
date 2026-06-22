@@ -1,153 +1,193 @@
-Customer Segmentation Analysis (K-Means Clustering)
+# Customer Segmentation using K-Means Clustering
 
-Project Overview
-This project analyzes customer purchasing behavior using clustering techniques to identify distinct customer segments based on income and spending patterns.
+## Project Overview
 
-The objective was to transform raw customer data into meaningful segments that can support targeted marketing strategies using machine learning.
+This project applies **K-Means Clustering** to the Mall Customer Dataset to segment customers based on their demographic and spending behavior. The objective is to identify distinct customer groups that can help businesses develop targeted marketing strategies and improve customer engagement.
 
-This project was completed as part of my Data Science Internship at Synent Technologies.
+---
 
-Business Problem
-Businesses often struggle to understand different types of customers and their spending behavior.
+## Dataset
 
-This project aims to answer key business questions:
+**Dataset:** Mall Customer Dataset
 
-How can customers be grouped based on spending behavior?
-Which customer segments have high spending potential?
-How does income relate to spending patterns?
-What marketing strategies can be applied to each segment?
-Dataset
-Dataset: Mall Customers Dataset
+**Features:**
 
-The dataset contains customer demographic and behavioral data including:
+* CustomerID
+* Gender
+* Age
+* Annual Income (k$)
+* Spending Score (1-100)
 
-Customer ID
-Gender
-Age
-Annual Income
-Spending Score
+**Total Records:** 200 customers
 
-Dataset Size:
+---
 
-200 records
-5 columns
+## Objective
 
-Tools & Technologies
-Python
-Pandas
-NumPy
-Matplotlib
-Seaborn
-Scikit-learn
-Jupyter Notebook
+* Preprocess and clean customer data.
+* Perform exploratory data analysis (EDA).
+* Apply K-Means clustering to identify customer segments.
+* Visualize customer groups and generate business insights.
 
-Project Workflow
-1. Data Loading & Inspection
-Imported dataset
-Checked data structure and data types
-Identified key features for clustering
+---
 
-2. Data Cleaning
-Checked for missing values
-Verified data consistency
-Selected relevant features for clustering
+# Project Workflow
 
-3. Exploratory Data Analysis (EDA)
+## 1. Data Loading and Inspection
+
+* Imported the dataset using Pandas.
+* Examined data structure and data types.
+* Identified features suitable for clustering.
+
+## 2. Data Cleaning
+
+* Checked for missing values and duplicates.
+* Verified data consistency.
+* Selected relevant features for clustering.
+
+## 3. Exploratory Data Analysis (EDA)
+
 Performed analysis on:
 
-Income distribution
-Spending score distribution
-Relationship between income and spending
-Customer behavior patterns
+* Income distribution
+* Spending score distribution
+* Relationship between income and spending score
+* Customer behavior patterns
 
-4. Model Building (K-Means Clustering)
-Applied K-Means clustering algorithm
-Used Elbow Method to determine optimal number of clusters
-Assigned cluster labels to customers
+## 4. Model Building (K-Means Clustering)
 
-5. Data Visualization
-Created visualizations to identify:
+* Scaled numerical features.
+* Applied the Elbow Method to determine the optimal number of clusters.
+* Selected **5 clusters**.
+* Assigned cluster labels to customers.
 
-Customer segments
-Cluster distribution
-Income vs Spending patterns
+## 5. Data Visualization
 
-6. Business Insights
-Generated actionable insights based on customer segmentation results
+Created visualizations including:
 
-Key Findings
-Key Results
-Total records analyzed: 200
+* Elbow Method plot
+  
+  ![Elbow Method](screenshots/elbow_method.png)
 
-Identified 5 distinct customer segments
+  
+* Customer Segmentation scatter plot
 
-Clear separation between high and low spending groups
+  ![Customer_Segments](screenshots/customer_segments.png)
+  
+* Correlation Heatmap
+  
+  ![Correlation_Heat](screenshots/correlation_heatmap.png)
 
-Spending behavior is not strongly dependent on income alone
+---
 
-Customer segmentation provides actionable marketing insights
+# Key Findings
 
-Project Results
-Analyzed 200 customer records
+* Total records analyzed: **200**
+* Identified **5 distinct customer segments**.
+* Clear separation between high-spending and low-spending groups.
+* Spending behavior is not strongly dependent on income alone.
+* Customer segmentation provides actionable marketing insights.
 
-Identified 5 meaningful customer segments
+---
 
-Discovered high-income low-spenders and high-income high-spenders
+# Customer Segments
 
-Found distinct behavioral groups useful for targeted marketing
+### Cluster 0 – Average Customers
 
-Visualizations
-These visualizations helped identify meaningful customer patterns for targeted marketing strategies.
+* Moderate income and moderate spending.
+* Stable customer group with regular purchasing behavior.
 
-1. Elbow Method (Optimal Clusters)\
-   
-Helps determine the best number of clusters for K-Means.
-![Elbow Method](screenshots/elbow_method.png)
+### Cluster 1 – High-Value Customers
 
-3. Customer Segments (Clustering Result)
-   
-Shows how customers are grouped based on spending behavior.
-![Customer_Segments](screenshots/customer_segments.png)
+* High income and high spending score.
+* Premium customers with strong revenue potential.
 
-3. Correlation Heatmap
-   
-Displays relationships between numerical features like income and spending score.
-![Correlation_Heat](screenshots/correlation_heatmap.png)
+### Cluster 2 – Young High Spenders
 
-High-value customers
-Customers with high income and high spending score.
+* Low income but high spending behavior.
+* Potential long-term customers who respond well to marketing campaigns.
 
-Potential target customers
-Moderate income with high spending behavior.
+### Cluster 3 – Conservative High-Income Customers
 
-Low engagement customers
-Customers with low spending scores regardless of income.
+* High income but low spending.
+* Opportunity for targeted promotions and loyalty incentives.
 
-Behavioral Insights
-Spending behavior is not strictly dependent on income.
-Some high-income customers still exhibit low spending patterns.
+### Cluster 4 – Low Engagement Customers
 
-Business Recommendations
-Focus marketing campaigns on high-value customer segments.
+* Low income and low spending.
+* Require re-engagement strategies and personalized offers.
 
-Create loyalty programs for moderate-income high-spenders.
+---
 
-Re-engage low-spending customers with targeted promotions.
+# Business Insights
 
-Use segmentation results for personalized marketing strategies.
+* High-value customers should receive premium offers and loyalty rewards.
+* Moderate-income high spenders represent a strong growth opportunity.
+* Low-spending customers can be targeted with personalized promotions.
+* Customer segmentation enables more effective and data-driven marketing strategies.
 
-Future Improvements
-Future enhancements could include:
+---
 
-Hierarchical Clustering comparison
-Customer Lifetime Value prediction
-Recommendation system for personalized offers
-Integration with dashboard (Streamlit or Power BI)
-Real-time customer segmentation system
+# Business Recommendations
 
-Author
-Cwenga Ndzendze
+1. Focus marketing campaigns on high-value customer segments.
+2. Create loyalty programs for moderate-income high spenders.
+3. Re-engage low-spending customers through targeted promotions.
+4. Use customer segmentation to personalize marketing efforts.
 
-Data Science Intern at Synent Technologies
+---
 
-Python | Machine Learning | Data Analytics | Visualization
+# Visualizations
+
+## Elbow Method
+
+Determines the optimal number of clusters for K-Means.
+
+## Customer Segments
+
+Visualizes customer groups based on annual income and spending score.
+
+## Correlation Heatmap
+
+Displays relationships between numerical features.
+
+---
+
+# Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-Learn
+* Jupyter Notebook
+
+---
+
+# Future Improvements
+
+* Compare results with Hierarchical Clustering.
+* Develop Customer Lifetime Value (CLV) prediction models.
+* Build a recommendation system for personalized offers.
+* Create an interactive dashboard using Streamlit or Power BI.
+* Develop a real-time customer segmentation system.
+
+---
+
+# Conclusion
+
+This project successfully segmented customers into five meaningful groups using K-Means Clustering. The insights generated can help businesses improve customer targeting, optimize marketing campaigns, and increase customer engagement.
+
+---
+
+# Author
+
+**Cwenga Ndzendze**
+
+Data Science Intern – Synent Technologies
+
+Skills: Python | Machine Learning | Data Analytics | Data Visualization | SQL
+
+
+
