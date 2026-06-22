@@ -99,17 +99,42 @@ Found distinct behavioral groups useful for targeted marketing
 Visualizations
 These visualizations helped identify meaningful customer patterns for targeted marketing strategies.
 
-1. Elbow Method (Optimal Clusters)
+1. Elbow Method (Optimal Clusters)\
+   
 Helps determine the best number of clusters for K-Means.
 ![Elbow Method](screenshots/elbow_method.png)
 
 3. Customer Segments (Clustering Result)
+   
 Shows how customers are grouped based on spending behavior.
 ![Customer_Segments](screenshots/customer_segments.png)
 
 3. Correlation Heatmap
+   
 Displays relationships between numerical features like income and spending score.
 ![Correlation_Heat](screenshots/correlation_heatmap.png)
+
+High-value customers
+Customers with high income and high spending score.
+
+Potential target customers
+Moderate income with high spending behavior.
+
+Low engagement customers
+Customers with low spending scores regardless of income.
+
+Behavioral Insights
+Spending behavior is not strictly dependent on income.
+Some high-income customers still exhibit low spending patterns.
+
+Business Recommendations
+Focus marketing campaigns on high-value customer segments.
+
+Create loyalty programs for moderate-income high-spenders.
+
+Re-engage low-spending customers with targeted promotions.
+
+Use segmentation results for personalized marketing strategies.
 
 Future Improvements
 Future enhancements could include:
@@ -124,4 +149,5 @@ Author
 Cwenga Ndzendze
 
 Data Science Intern at Synent Technologies
+
 Python | Machine Learning | Data Analytics | Visualization
